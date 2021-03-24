@@ -1,7 +1,7 @@
 require('dotenv').config();
 const { Client, MessageEmbed } = require('discord.js');
 const help = require('./commands/help');
-const schdule = require('./commands/schdule');
+const schedule = require('./commands/schedule');
 const utils = require('./utils');
 
 const client = new Client();
@@ -26,7 +26,7 @@ client.on('message', msg => {
         help.command(client, msg, args);
     }
     if (args[1] == "schedule" || args[1] == "sch") {
-        schdule.command(client, msg, args);
+        schedule.command(client, msg, args);
         return;
     }
 });
